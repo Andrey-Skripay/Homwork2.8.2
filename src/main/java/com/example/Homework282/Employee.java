@@ -1,20 +1,19 @@
 package com.example.Homework282;
 
 public class Employee {
-    private String name;
+    private String fullName;
+    private int department;
     private int salary;
-    private String department;
 
     private static int counter = 0;
 
     private final int id;
-    private final String fullName;
 
-    public Employee(String fullName, int department, double salary) {
+    public Employee(String fullName, int department, int salary) {
         this.id = ++counter;
         this.fullName = fullName;
-        this.department = String.valueOf(department);
-        this.salary = (int) salary;
+        this.department = department;
+        this.salary = salary;
     }
 
     public int getId() {
@@ -25,22 +24,22 @@ public class Employee {
         return fullName;
     }
 
-    public String getDepartment() {
+    public int getDepartment() {
         return department;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
     public void setDepartment(int department) {
-        this.department = String.valueOf(department);
+        this.department = department;
     }
 
-    public void setSalary(double salary) {
-
-        this.salary = (int) salary;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -51,4 +50,3 @@ public class Employee {
                 '}';
     }
 }
-

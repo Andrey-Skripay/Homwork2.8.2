@@ -29,7 +29,7 @@ public class DepartmentController {
         return departmentService.getAllEmployeesInDepartment(departmentId);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/all-employees")
     public Map<String, List<Employee>> getAllEmployeesByDepartment() {
         return departmentService.getAllEmployeesByDepartment();
     }
